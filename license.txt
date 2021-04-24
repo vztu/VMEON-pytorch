@@ -1,0 +1,29 @@
+========================================================================
+V-MEON for blind video quality assessment, Version 1.0
+Copyright(c) 2019 Wentao Liu, Zhengfang Duanmu
+All Rights Reserved.
+
+----------------------------------------------------------------------
+Permission to use, copy, or modify this software and its documentation
+for educational and research purposes only and without fee is hereby
+granted, provided that this copyright notice and the original authors'
+names appear on all copies and supporting documentation. This program
+shall not be used, rewritten, or adapted as the basis of a commercial
+software or hardware product without first obtaining permission of the
+authors. The authors make no representations about the suitability of
+this software for any purpose. It is provided "as is" without express
+or implied warranty. For detailed terms of this license, please refer
+to License.pdf in this code repository.
+----------------------------------------------------------------------
+
+This is an implementation of the V-MEON model for predicting the
+perceptual quality of a video compressed by H.264, HEVC, or MPEG4_Visual
+
+Please refer to the following paper and readme.txt with suggested usage
+
+W. Liu, Z. Duanmu, and Z. Wang, "End-to-end blind quality assessment
+of compressed videos using deep neural networks," Proceedings of the 
+26th ACM International Conference on Multimedia, Oct. 2018, pp. 546-554.
+
+Kindly report any suggestions or corrections to w238liu@uwaterloo.ca
+========================================================================

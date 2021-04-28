@@ -41,8 +41,9 @@ class VideoPreprocessor(object):
             bpp = bpplut[self.pix_fmt][1]
             self.num_channels = bpplut[self.pix_fmt][0]
             self.num_frames = file_size / (self.width * self.height * (bpp / 8.0))
-            if self.num_frames % 1 == 0:
-                self.num_frames = int(self.num_frames)
+            # if self.num_frames % 1 == 0:
+            if self.num_frames > 0:
+                self.num_frames = int(self.num_frames) - 5
             else:
                 raise ValueError("Cannot get a valid total frame number with the given specs.")
             self.in_file = ffmpeg.input(self.file_name, s=str(self.width) + 'x' + str(self.height),

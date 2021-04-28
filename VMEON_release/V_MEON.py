@@ -135,7 +135,7 @@ class Predictor:
         pred_ds = []
         pred_qs = []
         for i, clip in enumerate(data_loader):
-            # print(i)
+            # print(i, clip)
             inputs = Variable(clip)
             if self.use_cuda:
                 inputs = inputs.cuda()

@@ -92,10 +92,10 @@ if color_only:
     X3 = np.delete(X3, gray_indices, axis=0)
     y3 = np.delete(y3, gray_indices, axis=0)
 # concat three datasets
-X = np.vstack((X1, X2, X3))
+X = np.vstack((X1.T, X2.T, X3.T))
 y = np.vstack((y1.reshape(-1,1), y2.reshape(-1,1), y3.reshape(-1,1))).squeeze()
 
-X = X[:, list(range(0,1360))+list(range(3408,3884))]
+#X = X[:, list(range(0,1360))+list(range(3408,3884))]
 ## preprocessing
 X[np.isinf(X)] = np.nan
 from sklearn.impute import SimpleImputer

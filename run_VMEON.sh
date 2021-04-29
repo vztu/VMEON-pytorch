@@ -4,9 +4,9 @@
 MODELS=('VMEON')
 
 DATASETS=(
-    # 'LIVE_VQC'
-  'YOUTUBE_UGC'
-  'KONVID_1K'
+  'LIVE_VQC'
+  #'YOUTUBE_UGC'
+  #'KONVID_1K'
 )
 
 for m in "${MODELS[@]}"

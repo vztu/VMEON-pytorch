@@ -22,7 +22,7 @@ model_name = 'SVR'  # {SVR, RFR, XGB, SGD, GBM}
 data_name = 'ALL_COMBINED'
 color_only = False # if True, it is YouTube-UGCc dataset; if False it is YouTube-UGC
 use_inlsa = True # if True, apply INLSA calibration of MOS.
-algo_name = 'VRAPIQUE-3884'
+algo_name = 'VMEON'
 test_size = 0.2
 # csv_file = './mos_feat_files/'+data_name+'_metadata.csv'
 # mat_file = './mos_feat_files/'+data_name+'_'+algo_name+'_feats.mat'
@@ -31,8 +31,8 @@ corr_result_file = './repeated_tr_ts_svr_result/'+data_name+'_'+algo_name+'_corr
 '''======================== read files =============================== '''
 ## read KONVID_1K
 data_name = 'KONVID_1K'
-csv_file = os.path.join('mos_feat_files', data_name+'_metadata.csv')
-mat_file = os.path.join('mos_feat_files', data_name+'_'+algo_name+'_feats.mat')
+csv_file = os.path.join('mos_files', data_name+'_metadata.csv')
+mat_file = os.path.join('result', data_name+'_'+algo_name+'_feats.mat')
 df = pandas.read_csv(csv_file, skiprows=[], header=None)
 array = df.values
 y1 = array[1:,1]
@@ -50,8 +50,8 @@ if use_inlsa:
 
 ## read LIVE-VQC
 data_name = 'LIVE_VQC'
-csv_file = os.path.join('mos_feat_files', data_name+'_metadata.csv')
-mat_file = os.path.join('mos_feat_files', data_name+'_'+algo_name+'_feats.mat')
+csv_file = os.path.join('mos_files', data_name+'_metadata.csv')
+mat_file = os.path.join('result', data_name+'_'+algo_name+'_feats.mat')
 df = pandas.read_csv(csv_file, skiprows=[], header=None)
 array = df.values  
 y2 = array[1:,1]
@@ -73,8 +73,8 @@ else:
 
 ## read YOUTUBE_UGC
 data_name = 'YOUTUBE_UGC'
-csv_file = os.path.join('mos_feat_files', data_name+'_metadata.csv')
-mat_file = os.path.join('mos_feat_files', data_name+'_'+algo_name+'_feats.mat')
+csv_file = os.path.join('mos_files', data_name+'_metadata.csv')
+mat_file = os.path.join('result', data_name+'_'+algo_name+'_feats.mat')
 df = pandas.read_csv(csv_file, skiprows=[], header=None)
 array = df.values  
 y3 = array[1:,4]

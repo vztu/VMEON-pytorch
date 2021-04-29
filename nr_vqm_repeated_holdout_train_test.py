@@ -19,7 +19,7 @@ import numpy as np
 '''======================== parameters ================================''' 
 
 model_name = 'SVR'  # {SVR, RFR, XGB, SGD, GBM}
-data_name = 'KONVID_1K'
+data_name = 'LIVE_VQC'
 color_only = False # if True, it is YouTube-UGCc dataset; if False it is YouTube-UGC
 algo_name = 'VMEON'
 csv_file = './mos_files/'+data_name+'_metadata.csv'

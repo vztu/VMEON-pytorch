@@ -146,7 +146,7 @@ if __name__ == '__main__':
         os.makedirs(args.vframes_path)
     # sys.stdout = Logger(args.log_file)
 
-    video_tmp = '/media/ztu/Data/tmp'  # store tmp decoded .yuv file
+    video_tmp = './video_tmp'  # store tmp decoded .yuv file
     if not os.path.exists(video_tmp):
         os.makedirs(video_tmp)
 
@@ -162,7 +162,7 @@ if __name__ == '__main__':
     feats_mat = []
     time_cnts_all = []
 
-    for i in range(230,num_videos):
+    for i in range(num_videos):
         if args.dataset_name == 'KONVID_1K':
             video_name = os.path.join(args.dataset_path, str(mos_mat.loc[i, 'flickr_id'])+'.mp4')
         elif args.dataset_name == 'LIVE_VQC':
